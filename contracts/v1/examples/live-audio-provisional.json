@@ -1,0 +1,1137 @@
+{
+  "format": "eiken_pre1_session_bundle",
+  "schema_version": "1.0.0",
+  "bundle_mode": "self_contained",
+  "export_id": "demo-export-live",
+  "created_at": null,
+  "release": {
+    "spec": "1.0.0",
+    "protocol": "1.0.0",
+    "voice_prompt": "1.0.0",
+    "post_interview_prompt": "1.0.0"
+  },
+  "session": {
+    "session_id": "demo-session-live",
+    "state": "completed",
+    "mode": "text_scenario_drill",
+    "started_at": "2026-10-27T19:00:00+09:00",
+    "timezone": "Asia/Tokyo",
+    "is_synthetic": true,
+    "attempt_group_id": null,
+    "parent_session_id": null,
+    "conditions": {
+      "image_available": "no",
+      "timing_method": "none",
+      "assistance_used": "no",
+      "question_seen_before": "unknown",
+      "voice_runtime_reported": null,
+      "recording_status": "none"
+    },
+    "notes": "Entirely fictional live-audio observation fixture; no real audio was assessed."
+  },
+  "assets": [],
+  "captures": [
+    {
+      "capture_id": "demo-log",
+      "kind": "chat_ui_copy",
+      "content_text": "examiner: How are you today?\nlearner: I am fine, thank you.\nexaminer: Please narrate the story, beginning with: One day, a student went to a public library.\nlearner: One day, a student went to a public library. Most desks were empty, but bags were on the chairs. Some students leaves their bags there for hours. The student asked a librarian for help. A week later, the library introduced a rule against reserving seats for more than thirty minutes. When the student returned, several desks were available, so he could study there.\nexaminer: If you were the student in the last picture, what would you be thinking?\nlearner: I would be thinking that the new rule was useful because everyone had a better chance to find a seat. I would be happy to study there again.\nexaminer: Should public libraries introduce rules to prevent people from reserving empty seats?\nlearner: I think they should. Public libraries are shared spaces, so empty seats should be available to everyone. A clear rule would also make it easier for librarians to explain the system.\nexaminer: Do you think shared workspaces will become more common in the future?\nlearner: Yes, I think so. More people can work away from a traditional office. Shared workspaces give them a quiet place to work without renting their own office.\nexaminer: Should local governments spend more money on public facilities?\nlearner: Yes, because many people depend on libraries and community centers. However, local governments should first ask residents which facilities they need most, so that limited money is used effectively.\nexaminer: That is the end of the practice interview. Thank you.",
+      "asset_id": null,
+      "captured_at": null,
+      "scope": "interview",
+      "completeness": "complete",
+      "verified_by": "tool",
+      "notes": "Synthetic UI-log fixture; not a log copied from any real person."
+    },
+    {
+      "capture_id": "demo-live-narration",
+      "kind": "live_observation",
+      "content_text": "合成例：声は全体に理解しやすく、短い停止はあっても発話は続いていた。実音声を評価した記録ではない。",
+      "asset_id": null,
+      "captured_at": null,
+      "scope": "interview",
+      "completeness": "unknown",
+      "verified_by": "none",
+      "notes": "Fictional observation for provisional evidence-mode tests."
+    },
+    {
+      "capture_id": "demo-live-q1",
+      "kind": "live_observation",
+      "content_text": "合成例：声は全体に理解しやすく、短い停止はあっても発話は続いていた。実音声を評価した記録ではない。",
+      "asset_id": null,
+      "captured_at": null,
+      "scope": "interview",
+      "completeness": "unknown",
+      "verified_by": "none",
+      "notes": "Fictional observation for provisional evidence-mode tests."
+    },
+    {
+      "capture_id": "demo-live-q2",
+      "kind": "live_observation",
+      "content_text": "合成例：声は全体に理解しやすく、短い停止はあっても発話は続いていた。実音声を評価した記録ではない。",
+      "asset_id": null,
+      "captured_at": null,
+      "scope": "interview",
+      "completeness": "unknown",
+      "verified_by": "none",
+      "notes": "Fictional observation for provisional evidence-mode tests."
+    },
+    {
+      "capture_id": "demo-live-q3",
+      "kind": "live_observation",
+      "content_text": "合成例：声は全体に理解しやすく、短い停止はあっても発話は続いていた。実音声を評価した記録ではない。",
+      "asset_id": null,
+      "captured_at": null,
+      "scope": "interview",
+      "completeness": "unknown",
+      "verified_by": "none",
+      "notes": "Fictional observation for provisional evidence-mode tests."
+    },
+    {
+      "capture_id": "demo-live-q4",
+      "kind": "live_observation",
+      "content_text": "合成例：声は全体に理解しやすく、短い停止はあっても発話は続いていた。実音声を評価した記録ではない。",
+      "asset_id": null,
+      "captured_at": null,
+      "scope": "interview",
+      "completeness": "unknown",
+      "verified_by": "none",
+      "notes": "Fictional observation for provisional evidence-mode tests."
+    }
+  ],
+  "question_sets": [
+    {
+      "question_set_id": "demo-question-set",
+      "version": "1.0.0",
+      "origin": "original",
+      "source_description": "Fictional text scenario for contract tests; not an official test or a real user record.",
+      "asset_ids": [],
+      "intro": "Panel 1: A student finds desks occupied by unattended bags. Panel 2: The student asks a librarian for help. Panel 3: The library adds a thirty-minute seat-reservation rule. Panel 4: The student returns and finds available desks.",
+      "opening_sentence": "One day, a student went to a public library.",
+      "questions": [
+        {
+          "question_id": "demo-narration",
+          "slot": "narration",
+          "prompt": "Please narrate the story, beginning with: One day, a student went to a public library."
+        },
+        {
+          "question_id": "demo-q1",
+          "slot": "q1",
+          "prompt": "If you were the student in the last picture, what would you be thinking?"
+        },
+        {
+          "question_id": "demo-q2",
+          "slot": "q2",
+          "prompt": "Should public libraries introduce rules to prevent people from reserving empty seats?"
+        },
+        {
+          "question_id": "demo-q3",
+          "slot": "q3",
+          "prompt": "Do you think shared workspaces will become more common in the future?"
+        },
+        {
+          "question_id": "demo-q4",
+          "slot": "q4",
+          "prompt": "Should local governments spend more money on public facilities?"
+        }
+      ]
+    }
+  ],
+  "transcripts": [
+    {
+      "transcript_id": "demo-transcript-v1",
+      "parent_transcript_id": null,
+      "created_at": null,
+      "kind": "ui_transcript",
+      "coverage": "complete",
+      "source_capture_ids": [
+        "demo-log"
+      ],
+      "turns": [
+        {
+          "turn_id": "demo-turn-01",
+          "sequence": 1,
+          "speaker": "examiner",
+          "phase": "warmup",
+          "turn_kind": "social",
+          "question_id": null,
+          "text": "How are you today?",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        },
+        {
+          "turn_id": "demo-turn-02",
+          "sequence": 2,
+          "speaker": "learner",
+          "phase": "warmup",
+          "turn_kind": "social",
+          "question_id": null,
+          "text": "I am fine, thank you.",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        },
+        {
+          "turn_id": "demo-turn-03",
+          "sequence": 3,
+          "speaker": "examiner",
+          "phase": "narration",
+          "turn_kind": "question",
+          "question_id": "demo-narration",
+          "text": "Please narrate the story, beginning with: One day, a student went to a public library.",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        },
+        {
+          "turn_id": "demo-turn-04",
+          "sequence": 4,
+          "speaker": "learner",
+          "phase": "narration",
+          "turn_kind": "answer",
+          "question_id": "demo-narration",
+          "text": "One day, a student went to a public library. Most desks were empty, but bags were on the chairs. Some students leaves their bags there for hours. The student asked a librarian for help. A week later, the library introduced a rule against reserving seats for more than thirty minutes. When the student returned, several desks were available, so he could study there.",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        },
+        {
+          "turn_id": "demo-turn-05",
+          "sequence": 5,
+          "speaker": "examiner",
+          "phase": "q1",
+          "turn_kind": "question",
+          "question_id": "demo-q1",
+          "text": "If you were the student in the last picture, what would you be thinking?",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        },
+        {
+          "turn_id": "demo-turn-06",
+          "sequence": 6,
+          "speaker": "learner",
+          "phase": "q1",
+          "turn_kind": "answer",
+          "question_id": "demo-q1",
+          "text": "I would be thinking that the new rule was useful because everyone had a better chance to find a seat. I would be happy to study there again.",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        },
+        {
+          "turn_id": "demo-turn-07",
+          "sequence": 7,
+          "speaker": "examiner",
+          "phase": "q2",
+          "turn_kind": "question",
+          "question_id": "demo-q2",
+          "text": "Should public libraries introduce rules to prevent people from reserving empty seats?",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        },
+        {
+          "turn_id": "demo-turn-08",
+          "sequence": 8,
+          "speaker": "learner",
+          "phase": "q2",
+          "turn_kind": "answer",
+          "question_id": "demo-q2",
+          "text": "I think they should. Public libraries are shared spaces, so empty seats should be available to everyone. A clear rule would also make it easier for librarians to explain the system.",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        },
+        {
+          "turn_id": "demo-turn-09",
+          "sequence": 9,
+          "speaker": "examiner",
+          "phase": "q3",
+          "turn_kind": "question",
+          "question_id": "demo-q3",
+          "text": "Do you think shared workspaces will become more common in the future?",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        },
+        {
+          "turn_id": "demo-turn-10",
+          "sequence": 10,
+          "speaker": "learner",
+          "phase": "q3",
+          "turn_kind": "answer",
+          "question_id": "demo-q3",
+          "text": "Yes, I think so. More people can work away from a traditional office. Shared workspaces give them a quiet place to work without renting their own office.",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        },
+        {
+          "turn_id": "demo-turn-11",
+          "sequence": 11,
+          "speaker": "examiner",
+          "phase": "q4",
+          "turn_kind": "question",
+          "question_id": "demo-q4",
+          "text": "Should local governments spend more money on public facilities?",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        },
+        {
+          "turn_id": "demo-turn-12",
+          "sequence": 12,
+          "speaker": "learner",
+          "phase": "q4",
+          "turn_kind": "answer",
+          "question_id": "demo-q4",
+          "text": "Yes, because many people depend on libraries and community centers. However, local governments should first ask residents which facilities they need most, so that limited money is used effectively.",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        },
+        {
+          "turn_id": "demo-turn-13",
+          "sequence": 13,
+          "speaker": "examiner",
+          "phase": "closing",
+          "turn_kind": "social",
+          "question_id": null,
+          "text": "That is the end of the practice interview. Thank you.",
+          "content_status": "captured",
+          "source_capture_ids": [
+            "demo-log"
+          ],
+          "audio_segment": null,
+          "previous_turn_ids": [],
+          "notes": null
+        }
+      ],
+      "notes": "Synthetic fixture."
+    }
+  ],
+  "events": [],
+  "assessments": [
+    {
+      "assessment_id": "demo-assessment-live",
+      "kind": "initial",
+      "status": "draft",
+      "created_at": null,
+      "supersedes_assessment_id": null,
+      "blind_to_prior_scores": true,
+      "evaluator": {
+        "provider": "synthetic-fixture",
+        "model_reported": null,
+        "model_id": null,
+        "runtime": "unknown",
+        "settings_text": "All scores are fictional test values, not evaluation of a person."
+      },
+      "versions": {
+        "rubric": "1.0.0",
+        "taxonomy": "1.0.0",
+        "evaluator_prompt": "1.0.0",
+        "metrics": "1.0.0"
+      },
+      "input": {
+        "transcript_id": "demo-transcript-v1",
+        "question_set_id": "demo-question-set",
+        "asset_ids": [],
+        "live_capture_ids": [
+          "demo-live-narration",
+          "demo-live-q1",
+          "demo-live-q2",
+          "demo-live-q3",
+          "demo-live-q4"
+        ],
+        "input_manifest_sha256": null
+      },
+      "task_results": [
+        {
+          "question_id": "demo-narration",
+          "attempt_status": "answered",
+          "topic_ids": [
+            "topic.society.community",
+            "topic.society.education"
+          ],
+          "question_type_ids": [
+            "question.demand.narrative_sequence"
+          ],
+          "criteria": [
+            {
+              "criterion_id": "task_response",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-04",
+                  "quote": "One day, a student went to a public library. Most desks were empty, but bags were on the chairs. Some students leaves their bags there for hours. The student asked a librarian for help. A week later, the library introduced a rule against reserving seats for more than thirty minutes. When the student returned, several desks were available, so he could study there.",
+                  "char_start": 0,
+                  "char_end": 365
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "organization",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-04",
+                  "quote": "One day, a student went to a public library. Most desks were empty, but bags were on the chairs. Some students leaves their bags there for hours. The student asked a librarian for help. A week later, the library introduced a rule against reserving seats for more than thirty minutes. When the student returned, several desks were available, so he could study there.",
+                  "char_start": 0,
+                  "char_end": 365
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "grammar",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-04",
+                  "quote": "One day, a student went to a public library. Most desks were empty, but bags were on the chairs. Some students leaves their bags there for hours. The student asked a librarian for help. A week later, the library introduced a rule against reserving seats for more than thirty minutes. When the student returned, several desks were available, so he could study there.",
+                  "char_start": 0,
+                  "char_end": 365
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "vocabulary",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-04",
+                  "quote": "One day, a student went to a public library. Most desks were empty, but bags were on the chairs. Some students leaves their bags there for hours. The student asked a librarian for help. A week later, the library introduced a rule against reserving seats for more than thirty minutes. When the student returned, several desks were available, so he could study there.",
+                  "char_start": 0,
+                  "char_end": 365
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "intelligibility",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "live_audio",
+              "evidence_refs": [
+                {
+                  "kind": "capture",
+                  "capture_id": "demo-live-narration",
+                  "quote": null
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成テスト値：保存音源のない暫定観察として分離する。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "fluency",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "live_audio",
+              "evidence_refs": [
+                {
+                  "kind": "capture",
+                  "capture_id": "demo-live-narration",
+                  "quote": null
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成テスト値：保存音源のない暫定観察として分離する。",
+              "confidence": "medium"
+            }
+          ]
+        },
+        {
+          "question_id": "demo-q1",
+          "attempt_status": "answered",
+          "topic_ids": [
+            "topic.society.community",
+            "topic.society.education"
+          ],
+          "question_type_ids": [
+            "question.demand.perspective_thought",
+            "question.relation.illustration"
+          ],
+          "criteria": [
+            {
+              "criterion_id": "task_response",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-06",
+                  "quote": "I would be thinking that the new rule was useful because everyone had a better chance to find a seat. I would be happy to study there again.",
+                  "char_start": 0,
+                  "char_end": 140
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "organization",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-06",
+                  "quote": "I would be thinking that the new rule was useful because everyone had a better chance to find a seat. I would be happy to study there again.",
+                  "char_start": 0,
+                  "char_end": 140
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "grammar",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-06",
+                  "quote": "I would be thinking that the new rule was useful because everyone had a better chance to find a seat. I would be happy to study there again.",
+                  "char_start": 0,
+                  "char_end": 140
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "vocabulary",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-06",
+                  "quote": "I would be thinking that the new rule was useful because everyone had a better chance to find a seat. I would be happy to study there again.",
+                  "char_start": 0,
+                  "char_end": 140
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "intelligibility",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "live_audio",
+              "evidence_refs": [
+                {
+                  "kind": "capture",
+                  "capture_id": "demo-live-q1",
+                  "quote": null
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成テスト値：保存音源のない暫定観察として分離する。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "fluency",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "live_audio",
+              "evidence_refs": [
+                {
+                  "kind": "capture",
+                  "capture_id": "demo-live-q1",
+                  "quote": null
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成テスト値：保存音源のない暫定観察として分離する。",
+              "confidence": "medium"
+            }
+          ]
+        },
+        {
+          "question_id": "demo-q2",
+          "attempt_status": "answered",
+          "topic_ids": [
+            "topic.society.community",
+            "topic.society.education"
+          ],
+          "question_type_ids": [
+            "question.demand.opinion_reason",
+            "question.relation.card_topic"
+          ],
+          "criteria": [
+            {
+              "criterion_id": "task_response",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-08",
+                  "quote": "I think they should. Public libraries are shared spaces, so empty seats should be available to everyone. A clear rule would also make it easier for librarians to explain the system.",
+                  "char_start": 0,
+                  "char_end": 181
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "organization",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-08",
+                  "quote": "I think they should. Public libraries are shared spaces, so empty seats should be available to everyone. A clear rule would also make it easier for librarians to explain the system.",
+                  "char_start": 0,
+                  "char_end": 181
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "grammar",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-08",
+                  "quote": "I think they should. Public libraries are shared spaces, so empty seats should be available to everyone. A clear rule would also make it easier for librarians to explain the system.",
+                  "char_start": 0,
+                  "char_end": 181
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "vocabulary",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-08",
+                  "quote": "I think they should. Public libraries are shared spaces, so empty seats should be available to everyone. A clear rule would also make it easier for librarians to explain the system.",
+                  "char_start": 0,
+                  "char_end": 181
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "intelligibility",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "live_audio",
+              "evidence_refs": [
+                {
+                  "kind": "capture",
+                  "capture_id": "demo-live-q2",
+                  "quote": null
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成テスト値：保存音源のない暫定観察として分離する。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "fluency",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "live_audio",
+              "evidence_refs": [
+                {
+                  "kind": "capture",
+                  "capture_id": "demo-live-q2",
+                  "quote": null
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成テスト値：保存音源のない暫定観察として分離する。",
+              "confidence": "medium"
+            }
+          ]
+        },
+        {
+          "question_id": "demo-q3",
+          "attempt_status": "answered",
+          "topic_ids": [
+            "topic.society.community",
+            "topic.society.education"
+          ],
+          "question_type_ids": [
+            "question.demand.opinion_reason",
+            "question.relation.card_topic"
+          ],
+          "criteria": [
+            {
+              "criterion_id": "task_response",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-10",
+                  "quote": "Yes, I think so. More people can work away from a traditional office. Shared workspaces give them a quiet place to work without renting their own office.",
+                  "char_start": 0,
+                  "char_end": 153
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "organization",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-10",
+                  "quote": "Yes, I think so. More people can work away from a traditional office. Shared workspaces give them a quiet place to work without renting their own office.",
+                  "char_start": 0,
+                  "char_end": 153
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "grammar",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-10",
+                  "quote": "Yes, I think so. More people can work away from a traditional office. Shared workspaces give them a quiet place to work without renting their own office.",
+                  "char_start": 0,
+                  "char_end": 153
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "vocabulary",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-10",
+                  "quote": "Yes, I think so. More people can work away from a traditional office. Shared workspaces give them a quiet place to work without renting their own office.",
+                  "char_start": 0,
+                  "char_end": 153
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "intelligibility",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "live_audio",
+              "evidence_refs": [
+                {
+                  "kind": "capture",
+                  "capture_id": "demo-live-q3",
+                  "quote": null
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成テスト値：保存音源のない暫定観察として分離する。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "fluency",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "live_audio",
+              "evidence_refs": [
+                {
+                  "kind": "capture",
+                  "capture_id": "demo-live-q3",
+                  "quote": null
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成テスト値：保存音源のない暫定観察として分離する。",
+              "confidence": "medium"
+            }
+          ]
+        },
+        {
+          "question_id": "demo-q4",
+          "attempt_status": "answered",
+          "topic_ids": [
+            "topic.society.community",
+            "topic.society.education"
+          ],
+          "question_type_ids": [
+            "question.demand.opinion_reason",
+            "question.relation.loosely_related_social_topic"
+          ],
+          "criteria": [
+            {
+              "criterion_id": "task_response",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-12",
+                  "quote": "Yes, because many people depend on libraries and community centers. However, local governments should first ask residents which facilities they need most, so that limited money is used effectively.",
+                  "char_start": 0,
+                  "char_end": 197
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "organization",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-12",
+                  "quote": "Yes, because many people depend on libraries and community centers. However, local governments should first ask residents which facilities they need most, so that limited money is used effectively.",
+                  "char_start": 0,
+                  "char_end": 197
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "grammar",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-12",
+                  "quote": "Yes, because many people depend on libraries and community centers. However, local governments should first ask residents which facilities they need most, so that limited money is used effectively.",
+                  "char_start": 0,
+                  "char_end": 197
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "vocabulary",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "text",
+              "evidence_refs": [
+                {
+                  "kind": "turn",
+                  "transcript_id": "demo-transcript-v1",
+                  "turn_id": "demo-turn-12",
+                  "quote": "Yes, because many people depend on libraries and community centers. However, local governments should first ask residents which facilities they need most, so that limited money is used effectively.",
+                  "char_start": 0,
+                  "char_end": 197
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成例：この観点の3のアンカーを概ね満たす。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "intelligibility",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "live_audio",
+              "evidence_refs": [
+                {
+                  "kind": "capture",
+                  "capture_id": "demo-live-q4",
+                  "quote": null
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成テスト値：保存音源のない暫定観察として分離する。",
+              "confidence": "medium"
+            },
+            {
+              "criterion_id": "fluency",
+              "status": "scored",
+              "score": 3,
+              "evidence_mode": "live_audio",
+              "evidence_refs": [
+                {
+                  "kind": "capture",
+                  "capture_id": "demo-live-q4",
+                  "quote": null
+                }
+              ],
+              "reason_code": null,
+              "reason": "合成テスト値：保存音源のない暫定観察として分離する。",
+              "confidence": "medium"
+            }
+          ]
+        }
+      ],
+      "session_criteria": [
+        {
+          "criterion_id": "interaction",
+          "status": "scored",
+          "score": 3,
+          "evidence_mode": "text",
+          "evidence_refs": [
+            {
+              "kind": "turn",
+              "transcript_id": "demo-transcript-v1",
+              "turn_id": "demo-turn-06",
+              "quote": "I would be thinking that the new rule was useful because everyone had a better chance to find a seat. I would be happy to study there again.",
+              "char_start": 0,
+              "char_end": 140
+            },
+            {
+              "kind": "turn",
+              "transcript_id": "demo-transcript-v1",
+              "turn_id": "demo-turn-08",
+              "quote": "I think they should. Public libraries are shared spaces, so empty seats should be available to everyone. A clear rule would also make it easier for librarians to explain the system.",
+              "char_start": 0,
+              "char_end": 181
+            }
+          ],
+          "reason_code": null,
+          "reason": "合成例：文字で確認できる応答に限った評価。声や表情は評価していない。",
+          "confidence": "medium"
+        }
+      ],
+      "findings": [
+        {
+          "finding_id": "demo-finding-grammar",
+          "kind": "mistake",
+          "taxonomy_id": "mistake.grammar.subject_verb_agreement",
+          "secondary_taxonomy_ids": [],
+          "question_id": "demo-narration",
+          "occurrence_group_id": "demo-occurrence-01",
+          "criterion_ids": [
+            "grammar"
+          ],
+          "severity": "minor",
+          "countable": true,
+          "resolved_in_turn": false,
+          "review_state": "unreviewed",
+          "evidence_refs": [
+            {
+              "kind": "turn",
+              "transcript_id": "demo-transcript-v1",
+              "turn_id": "demo-turn-04",
+              "quote": "Some students leaves",
+              "char_start": 97,
+              "char_end": 117
+            }
+          ],
+          "description": "複数主語studentsに対してleavesとなっている。",
+          "correction": "Some students leave",
+          "root_cause_hypothesis": null
+        },
+        {
+          "finding_id": "demo-finding-strength",
+          "kind": "strength",
+          "taxonomy_id": "strength.content.clear_position",
+          "secondary_taxonomy_ids": [],
+          "question_id": "demo-q2",
+          "occurrence_group_id": "demo-occurrence-02",
+          "criterion_ids": [
+            "task_response"
+          ],
+          "severity": null,
+          "countable": true,
+          "resolved_in_turn": false,
+          "review_state": "unreviewed",
+          "evidence_refs": [
+            {
+              "kind": "turn",
+              "transcript_id": "demo-transcript-v1",
+              "turn_id": "demo-turn-08",
+              "quote": "I think they should.",
+              "char_start": 0,
+              "char_end": 20
+            }
+          ],
+          "description": "冒頭で質問への立場を示している。",
+          "correction": null,
+          "root_cause_hypothesis": null
+        }
+      ],
+      "rewrites": [
+        {
+          "question_id": "demo-narration",
+          "minimal_correction": "One day, a student went to a public library. Most desks were empty, but bags were on the chairs. Some students leave their bags there for hours. The student asked a librarian for help. A week later, the library introduced a rule against reserving seats for more than thirty minutes. When the student returned, several desks were available, so he could study there.",
+          "improved_answer": "One day, a student went to a public library. Most desks were empty, but bags were on the chairs. Some students leave their bags there for hours. The student asked a librarian for help. A week later, the library introduced a rule against reserving seats for more than thirty minutes. When the student returned, several desks were available, so he could study there.",
+          "teaching_note": "主語と動詞の一致のみ訂正した例。",
+          "new_content_added": false
+        }
+      ],
+      "recommendations": [
+        {
+          "priority": 1,
+          "task": "複数主語を含む文を短く作り、動詞の形を確認する。",
+          "related_finding_ids": [
+            "demo-finding-grammar"
+          ],
+          "success_criterion": "5文で主語と動詞が一致する。"
+        }
+      ],
+      "metrics": [
+        {
+          "metric_id": "duration_ms",
+          "question_id": "demo-narration",
+          "value": null,
+          "unit": "ms",
+          "method_id": "not-measured",
+          "source_asset_ids": [],
+          "source_turn_ids": [],
+          "evidence_mode": "none",
+          "source_capture_id": null,
+          "null_reason": "音声・実測ログがない。",
+          "notes": null
+        }
+      ],
+      "limitations": [
+        "架空の観察・点数であり、実音声はない。",
+        "再採点時にこの観察を原音声として扱わない。"
+      ],
+      "summary": "保存音源のない暫定音声評価の合成例。"
+    }
+  ],
+  "annotations": []
+}

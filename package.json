@@ -1,0 +1,41 @@
+{
+  "name": "eiken-practice-records",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "types:generate": "json2ts contracts/v1/schemas/session-bundle.schema.json src/domain/contract.d.ts",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "preview": "vite preview --host 0.0.0.0",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \"!src/domain/contract.d.ts\" \"tests/**/*.ts\" \"*.ts\"",
+    "build:standalone": "tsc --noEmit && node scripts/build-standalone.mjs",
+    "test:standalone": "npm run build:standalone && node scripts/check-standalone.mjs",
+    "release:html": "npm run build:standalone && node scripts/release-html.mjs"
+  },
+  "dependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "fflate": "0.8.3",
+    "idb": "8.0.4",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "fake-indexeddb": "6.2.6",
+    "json-schema-to-typescript": "16.0.0",
+    "prettier": "3.9.10",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}

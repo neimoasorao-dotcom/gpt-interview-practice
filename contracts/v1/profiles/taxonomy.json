@@ -1,0 +1,1113 @@
+{
+  "taxonomy_id": "pre1-learning-taxonomy",
+  "version": "1.0.0",
+  "groups": [
+    {
+      "id": "mistake.grammar",
+      "namespace": "mistake",
+      "label_ja": "文法・語法"
+    },
+    {
+      "id": "mistake.vocabulary",
+      "namespace": "mistake",
+      "label_ja": "語彙"
+    },
+    {
+      "id": "mistake.content",
+      "namespace": "mistake",
+      "label_ja": "内容"
+    },
+    {
+      "id": "mistake.organization",
+      "namespace": "mistake",
+      "label_ja": "構成"
+    },
+    {
+      "id": "mistake.pronunciation",
+      "namespace": "mistake",
+      "label_ja": "発音"
+    },
+    {
+      "id": "mistake.fluency",
+      "namespace": "mistake",
+      "label_ja": "流暢さ"
+    },
+    {
+      "id": "mistake.interaction",
+      "namespace": "mistake",
+      "label_ja": "対話"
+    },
+    {
+      "id": "strength.content",
+      "namespace": "strength",
+      "label_ja": "内容"
+    },
+    {
+      "id": "strength.organization",
+      "namespace": "strength",
+      "label_ja": "構成"
+    },
+    {
+      "id": "strength.grammar",
+      "namespace": "strength",
+      "label_ja": "文法・語法"
+    },
+    {
+      "id": "strength.vocabulary",
+      "namespace": "strength",
+      "label_ja": "語彙"
+    },
+    {
+      "id": "strength.speech",
+      "namespace": "strength",
+      "label_ja": "音声・修復"
+    },
+    {
+      "id": "strength.interaction",
+      "namespace": "strength",
+      "label_ja": "対話"
+    },
+    {
+      "id": "topic.society",
+      "namespace": "topic",
+      "label_ja": "社会的話題"
+    },
+    {
+      "id": "question.demand",
+      "namespace": "question",
+      "label_ja": "認知的要求"
+    },
+    {
+      "id": "question.relation",
+      "namespace": "question",
+      "label_ja": "素材との関係"
+    }
+  ],
+  "terms": [
+    {
+      "id": "mistake.grammar.tense_aspect",
+      "namespace": "mistake",
+      "parent_id": "mistake.grammar",
+      "label_ja": "時制・相",
+      "definition_ja": "時制・相。正しい形・語法との不一致が文脈から確認できる。ASR疑いはuncertainにする。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.grammar.subject_verb_agreement",
+      "namespace": "mistake",
+      "parent_id": "mistake.grammar",
+      "label_ja": "主語と動詞の一致",
+      "definition_ja": "主語と動詞の一致。正しい形・語法との不一致が文脈から確認できる。ASR疑いはuncertainにする。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.grammar.articles_determiners",
+      "namespace": "mistake",
+      "parent_id": "mistake.grammar",
+      "label_ja": "冠詞・限定詞",
+      "definition_ja": "冠詞・限定詞。正しい形・語法との不一致が文脈から確認できる。ASR疑いはuncertainにする。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.grammar.number_countability",
+      "namespace": "mistake",
+      "parent_id": "mistake.grammar",
+      "label_ja": "単複・可算性",
+      "definition_ja": "単複・可算性。正しい形・語法との不一致が文脈から確認できる。ASR疑いはuncertainにする。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.grammar.pronoun_reference",
+      "namespace": "mistake",
+      "parent_id": "mistake.grammar",
+      "label_ja": "代名詞の形・指示",
+      "definition_ja": "代名詞の形・指示。正しい形・語法との不一致が文脈から確認できる。ASR疑いはuncertainにする。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.grammar.preposition",
+      "namespace": "mistake",
+      "parent_id": "mistake.grammar",
+      "label_ja": "前置詞",
+      "definition_ja": "前置詞。正しい形・語法との不一致が文脈から確認できる。ASR疑いはuncertainにする。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.grammar.word_order",
+      "namespace": "mistake",
+      "parent_id": "mistake.grammar",
+      "label_ja": "語順",
+      "definition_ja": "語順。正しい形・語法との不一致が文脈から確認できる。ASR疑いはuncertainにする。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.grammar.clause_structure",
+      "namespace": "mistake",
+      "parent_id": "mistake.grammar",
+      "label_ja": "節構造・接続",
+      "definition_ja": "節構造・接続。正しい形・語法との不一致が文脈から確認できる。ASR疑いはuncertainにする。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.grammar.verb_pattern",
+      "namespace": "mistake",
+      "parent_id": "mistake.grammar",
+      "label_ja": "動詞の型・語法",
+      "definition_ja": "動詞の型・語法。正しい形・語法との不一致が文脈から確認できる。ASR疑いはuncertainにする。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.grammar.modality_conditional",
+      "namespace": "mistake",
+      "parent_id": "mistake.grammar",
+      "label_ja": "助動詞・条件表現",
+      "definition_ja": "助動詞・条件表現。正しい形・語法との不一致が文脈から確認できる。ASR疑いはuncertainにする。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.grammar.comparative",
+      "namespace": "mistake",
+      "parent_id": "mistake.grammar",
+      "label_ja": "比較表現",
+      "definition_ja": "比較表現。正しい形・語法との不一致が文脈から確認できる。ASR疑いはuncertainにする。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.vocabulary.wrong_word",
+      "namespace": "mistake",
+      "parent_id": "mistake.vocabulary",
+      "label_ja": "文脈と合わない語",
+      "definition_ja": "文脈と合わない語。文脈で不適切または意味を損なう語の使用。自然さの好みだけならstyle_suggestion。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.vocabulary.collocation",
+      "namespace": "mistake",
+      "parent_id": "mistake.vocabulary",
+      "label_ja": "語の組合せ",
+      "definition_ja": "語の組合せ。文脈で不適切または意味を損なう語の使用。自然さの好みだけならstyle_suggestion。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.vocabulary.word_form",
+      "namespace": "mistake",
+      "parent_id": "mistake.vocabulary",
+      "label_ja": "品詞・語形",
+      "definition_ja": "品詞・語形。文脈で不適切または意味を損なう語の使用。自然さの好みだけならstyle_suggestion。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.vocabulary.register",
+      "namespace": "mistake",
+      "parent_id": "mistake.vocabulary",
+      "label_ja": "場面に合わない表現",
+      "definition_ja": "場面に合わない表現。文脈で不適切または意味を損なう語の使用。自然さの好みだけならstyle_suggestion。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.vocabulary.repetition",
+      "namespace": "mistake",
+      "parent_id": "mistake.vocabulary",
+      "label_ja": "意味を損なう反復",
+      "definition_ja": "意味を損なう反復。文脈で不適切または意味を損なう語の使用。自然さの好みだけならstyle_suggestion。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.vocabulary.imprecise_expression",
+      "namespace": "mistake",
+      "parent_id": "mistake.vocabulary",
+      "label_ja": "不明確な語選択",
+      "definition_ja": "不明確な語選択。文脈で不適切または意味を損なう語の使用。自然さの好みだけならstyle_suggestion。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.content.off_task",
+      "namespace": "mistake",
+      "parent_id": "mistake.content",
+      "label_ja": "質問への不適合",
+      "definition_ja": "質問への不適合。当該課題の要求または提示素材との不整合。立場そのものの正誤は判定しない。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.content.missing_key_event",
+      "namespace": "mistake",
+      "parent_id": "mistake.content",
+      "label_ja": "主要事象の欠落",
+      "definition_ja": "主要事象の欠落。当該課題の要求または提示素材との不整合。立場そのものの正誤は判定しない。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.content.unsupported_invention",
+      "namespace": "mistake",
+      "parent_id": "mistake.content",
+      "label_ja": "画像に反する創作",
+      "definition_ja": "画像に反する創作。当該課題の要求または提示素材との不整合。立場そのものの正誤は判定しない。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.content.perspective_mismatch",
+      "namespace": "mistake",
+      "parent_id": "mistake.content",
+      "label_ja": "指定人物の視点ずれ",
+      "definition_ja": "指定人物の視点ずれ。当該課題の要求または提示素材との不整合。立場そのものの正誤は判定しない。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.content.insufficient_support",
+      "namespace": "mistake",
+      "parent_id": "mistake.content",
+      "label_ja": "理由・具体化の不足",
+      "definition_ja": "理由・具体化の不足。当該課題の要求または提示素材との不整合。立場そのものの正誤は判定しない。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.content.contradiction",
+      "namespace": "mistake",
+      "parent_id": "mistake.content",
+      "label_ja": "説明の矛盾",
+      "definition_ja": "説明の矛盾。当該課題の要求または提示素材との不整合。立場そのものの正誤は判定しない。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.content.misunderstood_question",
+      "namespace": "mistake",
+      "parent_id": "mistake.content",
+      "label_ja": "質問の取り違え",
+      "definition_ja": "質問の取り違え。当該課題の要求または提示素材との不整合。立場そのものの正誤は判定しない。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.organization.chronology",
+      "namespace": "mistake",
+      "parent_id": "mistake.organization",
+      "label_ja": "時系列の混乱",
+      "definition_ja": "時系列の混乱。観測した回答で情報間の関係が伝わりにくい。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.organization.causal_link",
+      "namespace": "mistake",
+      "parent_id": "mistake.organization",
+      "label_ja": "因果の飛躍",
+      "definition_ja": "因果の飛躍。観測した回答で情報間の関係が伝わりにくい。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.organization.unclear_reference",
+      "namespace": "mistake",
+      "parent_id": "mistake.organization",
+      "label_ja": "人物・対象の曖昧さ",
+      "definition_ja": "人物・対象の曖昧さ。観測した回答で情報間の関係が伝わりにくい。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.organization.disconnected_reason",
+      "namespace": "mistake",
+      "parent_id": "mistake.organization",
+      "label_ja": "主張と理由の断絶",
+      "definition_ja": "主張と理由の断絶。観測した回答で情報間の関係が伝わりにくい。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.organization.redundancy",
+      "namespace": "mistake",
+      "parent_id": "mistake.organization",
+      "label_ja": "展開を妨げる冗長さ",
+      "definition_ja": "展開を妨げる冗長さ。観測した回答で情報間の関係が伝わりにくい。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.pronunciation.segment_clarity",
+      "namespace": "mistake",
+      "parent_id": "mistake.pronunciation",
+      "label_ja": "語音の不明瞭さ",
+      "definition_ja": "語音の不明瞭さ。実音声により明瞭さを妨げる特徴が確認できる。音の種類だけでは減点しない。",
+      "requires_audio": true,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.pronunciation.word_stress",
+      "namespace": "mistake",
+      "parent_id": "mistake.pronunciation",
+      "label_ja": "語強勢",
+      "definition_ja": "語強勢。実音声により明瞭さを妨げる特徴が確認できる。音の種類だけでは減点しない。",
+      "requires_audio": true,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.pronunciation.thought_group",
+      "namespace": "mistake",
+      "parent_id": "mistake.pronunciation",
+      "label_ja": "意味の区切り",
+      "definition_ja": "意味の区切り。実音声により明瞭さを妨げる特徴が確認できる。音の種類だけでは減点しない。",
+      "requires_audio": true,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.pronunciation.prosody",
+      "namespace": "mistake",
+      "parent_id": "mistake.pronunciation",
+      "label_ja": "意味を妨げる抑揚",
+      "definition_ja": "意味を妨げる抑揚。実音声により明瞭さを妨げる特徴が確認できる。音の種類だけでは減点しない。",
+      "requires_audio": true,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.fluency.disruptive_pause",
+      "namespace": "mistake",
+      "parent_id": "mistake.fluency",
+      "label_ja": "伝達を妨げる停止",
+      "definition_ja": "伝達を妨げる停止。実音声により伝達の継続を妨げる特徴が確認できる。",
+      "requires_audio": true,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.fluency.restart_breakdown",
+      "namespace": "mistake",
+      "parent_id": "mistake.fluency",
+      "label_ja": "繰り返す再開始",
+      "definition_ja": "繰り返す再開始。実音声により伝達の継続を妨げる特徴が確認できる。",
+      "requires_audio": true,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.fluency.filler_overload",
+      "namespace": "mistake",
+      "parent_id": "mistake.fluency",
+      "label_ja": "伝達を妨げるフィラー",
+      "definition_ja": "伝達を妨げるフィラー。実音声により伝達の継続を妨げる特徴が確認できる。",
+      "requires_audio": true,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.fluency.abandoned_utterance",
+      "namespace": "mistake",
+      "parent_id": "mistake.fluency",
+      "label_ja": "発話の放棄",
+      "definition_ja": "発話の放棄。実音声により伝達の継続を妨げる特徴が確認できる。",
+      "requires_audio": true,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.interaction.unresolved_misunderstanding",
+      "namespace": "mistake",
+      "parent_id": "mistake.interaction",
+      "label_ja": "解消されない誤解",
+      "definition_ja": "解消されない誤解。双方のやりとりと必要な確認機会に照らした対話上の問題。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.interaction.unnatural_repetition_request",
+      "namespace": "mistake",
+      "parent_id": "mistake.interaction",
+      "label_ja": "不自然な反復確認",
+      "definition_ja": "不自然な反復確認。双方のやりとりと必要な確認機会に照らした対話上の問題。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.interaction.ignored_instruction",
+      "namespace": "mistake",
+      "parent_id": "mistake.interaction",
+      "label_ja": "指示への不対応",
+      "definition_ja": "指示への不対応。双方のやりとりと必要な確認機会に照らした対話上の問題。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "mistake.interaction.response_breakdown",
+      "namespace": "mistake",
+      "parent_id": "mistake.interaction",
+      "label_ja": "対話の停止",
+      "definition_ja": "対話の停止。双方のやりとりと必要な確認機会に照らした対話上の問題。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.content.key_event_coverage",
+      "namespace": "strength",
+      "parent_id": "strength.content",
+      "label_ja": "主要事象を捉える",
+      "definition_ja": "主要事象を捉える。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.content.clear_position",
+      "namespace": "strength",
+      "parent_id": "strength.content",
+      "label_ja": "明確な立場",
+      "definition_ja": "明確な立場。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.content.relevant_support",
+      "namespace": "strength",
+      "parent_id": "strength.content",
+      "label_ja": "関連する根拠・具体例",
+      "definition_ja": "関連する根拠・具体例。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.content.perspective_control",
+      "namespace": "strength",
+      "parent_id": "strength.content",
+      "label_ja": "指定視点の維持",
+      "definition_ja": "指定視点の維持。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.organization.chronological_flow",
+      "namespace": "strength",
+      "parent_id": "strength.organization",
+      "label_ja": "自然な時系列",
+      "definition_ja": "自然な時系列。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.organization.causal_coherence",
+      "namespace": "strength",
+      "parent_id": "strength.organization",
+      "label_ja": "明確な因果",
+      "definition_ja": "明確な因果。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.organization.concise_development",
+      "namespace": "strength",
+      "parent_id": "strength.organization",
+      "label_ja": "簡潔な展開",
+      "definition_ja": "簡潔な展開。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.grammar.accurate_basic_forms",
+      "namespace": "strength",
+      "parent_id": "strength.grammar",
+      "label_ja": "安定した基礎文法",
+      "definition_ja": "安定した基礎文法。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.grammar.effective_complex_clause",
+      "namespace": "strength",
+      "parent_id": "strength.grammar",
+      "label_ja": "効果的な複文",
+      "definition_ja": "効果的な複文。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.grammar.accurate_time_reference",
+      "namespace": "strength",
+      "parent_id": "strength.grammar",
+      "label_ja": "適切な時間関係",
+      "definition_ja": "適切な時間関係。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.vocabulary.paraphrase",
+      "namespace": "strength",
+      "parent_id": "strength.vocabulary",
+      "label_ja": "言換え",
+      "definition_ja": "言換え。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.vocabulary.precise_choice",
+      "namespace": "strength",
+      "parent_id": "strength.vocabulary",
+      "label_ja": "的確な語選択",
+      "definition_ja": "的確な語選択。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.vocabulary.natural_collocation",
+      "namespace": "strength",
+      "parent_id": "strength.vocabulary",
+      "label_ja": "自然な語の組合せ",
+      "definition_ja": "自然な語の組合せ。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.speech.intelligible_delivery",
+      "namespace": "strength",
+      "parent_id": "strength.speech",
+      "label_ja": "理解しやすい発話",
+      "definition_ja": "理解しやすい発話。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": true,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.speech.meaningful_chunking",
+      "namespace": "strength",
+      "parent_id": "strength.speech",
+      "label_ja": "意味に沿う区切り",
+      "definition_ja": "意味に沿う区切り。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": true,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.speech.sustained_flow",
+      "namespace": "strength",
+      "parent_id": "strength.speech",
+      "label_ja": "発話の継続",
+      "definition_ja": "発話の継続。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": true,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.speech.successful_self_repair",
+      "namespace": "strength",
+      "parent_id": "strength.speech",
+      "label_ja": "効果的な自己修復",
+      "definition_ja": "効果的な自己修復。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.interaction.natural_clarification",
+      "namespace": "strength",
+      "parent_id": "strength.interaction",
+      "label_ja": "自然な聞き返し",
+      "definition_ja": "自然な聞き返し。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.interaction.appropriate_response",
+      "namespace": "strength",
+      "parent_id": "strength.interaction",
+      "label_ja": "適切な応答",
+      "definition_ja": "適切な応答。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "strength.interaction.recovery",
+      "namespace": "strength",
+      "parent_id": "strength.interaction",
+      "label_ja": "誤解からの回復",
+      "definition_ja": "誤解からの回復。実際の回答・音声・やりとりで確認された再利用可能な成功。",
+      "requires_audio": false,
+      "counting_unit": "occurrence_group",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.education",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "教育",
+      "definition_ja": "教育。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.work",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "労働・働き方",
+      "definition_ja": "労働・働き方。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.environment",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "自然・環境",
+      "definition_ja": "自然・環境。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.technology",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "技術",
+      "definition_ja": "技術。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.health",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "健康・医療",
+      "definition_ja": "健康・医療。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.media",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "メディア・情報",
+      "definition_ja": "メディア・情報。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.economy",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "経済・消費",
+      "definition_ja": "経済・消費。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.government",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "政府・政策",
+      "definition_ja": "政府・政策。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.community",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "地域社会",
+      "definition_ja": "地域社会。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.family",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "家庭・世代",
+      "definition_ja": "家庭・世代。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.culture",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "文化",
+      "definition_ja": "文化。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.public_safety",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "治安・安全",
+      "definition_ja": "治安・安全。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.transport",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "交通",
+      "definition_ja": "交通。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.international",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "国際問題",
+      "definition_ja": "国際問題。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.science",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "科学",
+      "definition_ja": "科学。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.rights",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "権利・平等",
+      "definition_ja": "権利・平等。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.aging",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "高齢化",
+      "definition_ja": "高齢化。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.tourism",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "観光",
+      "definition_ja": "観光。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.animal_welfare",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "動物福祉",
+      "definition_ja": "動物福祉。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "topic.society.other",
+      "namespace": "topic",
+      "parent_id": "topic.society",
+      "label_ja": "その他",
+      "definition_ja": "その他。問題の主題ラベル。複数付与可。回答者の能力・価値観を表さない。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "question.demand.narrative_sequence",
+      "namespace": "question",
+      "parent_id": "question.demand",
+      "label_ja": "出来事の展開を語る",
+      "definition_ja": "出来事の展開を語る。slotとは独立した、問いの認知的要求または素材との関係。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "question.demand.perspective_thought",
+      "namespace": "question",
+      "parent_id": "question.demand",
+      "label_ja": "人物の立場で考えを述べる",
+      "definition_ja": "人物の立場で考えを述べる。slotとは独立した、問いの認知的要求または素材との関係。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "question.demand.opinion_reason",
+      "namespace": "question",
+      "parent_id": "question.demand",
+      "label_ja": "意見と理由",
+      "definition_ja": "意見と理由。slotとは独立した、問いの認知的要求または素材との関係。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "question.demand.policy_evaluation",
+      "namespace": "question",
+      "parent_id": "question.demand",
+      "label_ja": "施策の評価",
+      "definition_ja": "施策の評価。slotとは独立した、問いの認知的要求または素材との関係。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "question.demand.prediction",
+      "namespace": "question",
+      "parent_id": "question.demand",
+      "label_ja": "将来予測",
+      "definition_ja": "将来予測。slotとは独立した、問いの認知的要求または素材との関係。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "question.demand.cause_effect",
+      "namespace": "question",
+      "parent_id": "question.demand",
+      "label_ja": "原因・影響",
+      "definition_ja": "原因・影響。slotとは独立した、問いの認知的要求または素材との関係。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "question.demand.comparison",
+      "namespace": "question",
+      "parent_id": "question.demand",
+      "label_ja": "比較",
+      "definition_ja": "比較。slotとは独立した、問いの認知的要求または素材との関係。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "question.demand.solution",
+      "namespace": "question",
+      "parent_id": "question.demand",
+      "label_ja": "解決策",
+      "definition_ja": "解決策。slotとは独立した、問いの認知的要求または素材との関係。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "question.demand.tradeoff",
+      "namespace": "question",
+      "parent_id": "question.demand",
+      "label_ja": "利点と不利益",
+      "definition_ja": "利点と不利益。slotとは独立した、問いの認知的要求または素材との関係。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "question.relation.illustration",
+      "namespace": "question",
+      "parent_id": "question.relation",
+      "label_ja": "イラスト関連",
+      "definition_ja": "イラスト関連。slotとは独立した、問いの認知的要求または素材との関係。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "question.relation.card_topic",
+      "namespace": "question",
+      "parent_id": "question.relation",
+      "label_ja": "カードのトピック関連",
+      "definition_ja": "カードのトピック関連。slotとは独立した、問いの認知的要求または素材との関係。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    },
+    {
+      "id": "question.relation.loosely_related_social_topic",
+      "namespace": "question",
+      "parent_id": "question.relation",
+      "label_ja": "やや関連する社会的内容",
+      "definition_ja": "やや関連する社会的内容。slotとは独立した、問いの認知的要求または素材との関係。",
+      "requires_audio": false,
+      "counting_unit": "question",
+      "deprecated": false,
+      "replacement_ids": []
+    }
+  ],
+  "unknown_id_policy": "do_not_invent; record_candidate_in_description; return_change_request_to_Work",
+  "mapping_policy": "retain_original_ids_and_version; do_not_silently_map_ambiguous_terms"
+}

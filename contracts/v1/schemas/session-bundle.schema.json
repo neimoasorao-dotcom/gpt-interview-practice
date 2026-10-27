@@ -1,0 +1,1975 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:eiken-pre1:session-bundle:1.0.0",
+  "title": "Eiken Pre-1 practice session exchange bundle v1.0.0",
+  "description": "Strict exchange structure; semantic validation and provenance review are additionally required.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "eiken_pre1_session_bundle"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "bundle_mode": {
+      "enum": [
+        "self_contained",
+        "append"
+      ]
+    },
+    "export_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+    },
+    "created_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "spec": {
+          "const": "1.0.0"
+        },
+        "protocol": {
+          "type": "string",
+          "minLength": 1
+        },
+        "voice_prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "post_interview_prompt": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "spec",
+        "protocol",
+        "voice_prompt",
+        "post_interview_prompt"
+      ]
+    },
+    "session": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "session_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "state": {
+          "enum": [
+            "completed",
+            "aborted",
+            "partial"
+          ]
+        },
+        "mode": {
+          "enum": [
+            "mock_interview",
+            "focused_drill",
+            "coached_practice",
+            "text_scenario_drill",
+            "retry"
+          ]
+        },
+        "started_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "timezone": {
+          "const": "Asia/Tokyo"
+        },
+        "is_synthetic": {
+          "type": "boolean"
+        },
+        "attempt_group_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "parent_session_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "conditions": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "image_available": {
+              "enum": [
+                "yes",
+                "no",
+                "unknown"
+              ]
+            },
+            "timing_method": {
+              "enum": [
+                "external_timer",
+                "instrumented",
+                "estimated",
+                "none",
+                "unknown"
+              ]
+            },
+            "assistance_used": {
+              "enum": [
+                "yes",
+                "no",
+                "unknown"
+              ]
+            },
+            "question_seen_before": {
+              "enum": [
+                "yes",
+                "no",
+                "unknown"
+              ]
+            },
+            "voice_runtime_reported": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "recording_status": {
+              "enum": [
+                "both_speakers",
+                "learner_only",
+                "examiner_only",
+                "none",
+                "unknown"
+              ]
+            }
+          },
+          "required": [
+            "image_available",
+            "timing_method",
+            "assistance_used",
+            "question_seen_before",
+            "voice_runtime_reported",
+            "recording_status"
+          ]
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "session_id",
+        "state",
+        "mode",
+        "started_at",
+        "timezone",
+        "is_synthetic",
+        "attempt_group_id",
+        "parent_session_id",
+        "conditions",
+        "notes"
+      ]
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/asset"
+      }
+    },
+    "captures": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/capture"
+      }
+    },
+    "question_sets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/question_set"
+      }
+    },
+    "transcripts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/transcript"
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    },
+    "assessments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/assessment"
+      }
+    },
+    "annotations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/annotation"
+      }
+    }
+  },
+  "required": [
+    "format",
+    "schema_version",
+    "bundle_mode",
+    "export_id",
+    "created_at",
+    "release",
+    "session",
+    "assets",
+    "captures",
+    "question_sets",
+    "transcripts",
+    "events",
+    "assessments",
+    "annotations"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "bundle_mode": {
+            "const": "self_contained"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "captures": {
+            "minItems": 1
+          },
+          "question_sets": {
+            "minItems": 1
+          },
+          "transcripts": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "asset_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "kind": {
+          "enum": [
+            "audio",
+            "image",
+            "original_log",
+            "other"
+          ]
+        },
+        "filename": {
+          "type": "string",
+          "minLength": 1
+        },
+        "availability": {
+          "enum": [
+            "saved",
+            "external",
+            "missing"
+          ]
+        },
+        "path": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "mime_type": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "duration_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sample_rate_hz": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "channels": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "speaker_coverage": {
+          "enum": [
+            "both",
+            "learner_only",
+            "examiner_only",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "capture_tool": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rights": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "asset_id",
+        "kind",
+        "filename",
+        "availability",
+        "path",
+        "sha256",
+        "mime_type",
+        "duration_ms",
+        "sample_rate_hz",
+        "channels",
+        "speaker_coverage",
+        "capture_tool",
+        "rights",
+        "notes"
+      ]
+    },
+    "capture": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "capture_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "kind": {
+          "enum": [
+            "chat_ui_copy",
+            "platform_export",
+            "audio_recording",
+            "live_observation",
+            "model_reconstruction",
+            "measurement_log"
+          ]
+        },
+        "content_text": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "asset_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "captured_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scope": {
+          "enum": [
+            "interview",
+            "post_feedback",
+            "setup",
+            "mixed"
+          ]
+        },
+        "completeness": {
+          "enum": [
+            "complete",
+            "partial",
+            "unknown"
+          ]
+        },
+        "verified_by": {
+          "enum": [
+            "none",
+            "learner",
+            "human",
+            "tool"
+          ]
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "capture_id",
+        "kind",
+        "content_text",
+        "asset_id",
+        "captured_at",
+        "scope",
+        "completeness",
+        "verified_by",
+        "notes"
+      ]
+    },
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "question_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "slot": {
+          "enum": [
+            "narration",
+            "q1",
+            "q2",
+            "q3",
+            "q4"
+          ]
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "question_id",
+        "slot",
+        "prompt"
+      ]
+    },
+    "question_set": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "question_set_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "enum": [
+            "original",
+            "official_sample",
+            "licensed_material",
+            "unknown"
+          ]
+        },
+        "source_description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "asset_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+          },
+          "uniqueItems": true
+        },
+        "intro": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "opening_sentence": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/question"
+          },
+          "minItems": 1,
+          "maxItems": 5
+        }
+      },
+      "required": [
+        "question_set_id",
+        "version",
+        "origin",
+        "source_description",
+        "asset_ids",
+        "intro",
+        "opening_sentence",
+        "questions"
+      ]
+    },
+    "audio_segment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "asset_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "start_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end_ms": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "asset_id",
+        "start_ms",
+        "end_ms"
+      ]
+    },
+    "turn": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "turn_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "speaker": {
+          "enum": [
+            "examiner",
+            "learner",
+            "system"
+          ]
+        },
+        "phase": {
+          "enum": [
+            "setup",
+            "warmup",
+            "preparation",
+            "narration",
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "closing",
+            "post_processing"
+          ]
+        },
+        "turn_kind": {
+          "enum": [
+            "answer",
+            "question",
+            "social",
+            "control",
+            "other"
+          ]
+        },
+        "question_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "text": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "content_status": {
+          "enum": [
+            "captured",
+            "unintelligible",
+            "missing",
+            "confirmed_silence"
+          ]
+        },
+        "source_capture_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "audio_segment": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/audio_segment"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "previous_turn_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+          },
+          "uniqueItems": true
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "turn_id",
+        "sequence",
+        "speaker",
+        "phase",
+        "turn_kind",
+        "question_id",
+        "text",
+        "content_status",
+        "source_capture_ids",
+        "audio_segment",
+        "previous_turn_ids",
+        "notes"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "content_status": {
+                "const": "captured"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "content_status": {
+                "enum": [
+                  "missing",
+                  "confirmed_silence"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "text": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "transcript": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "transcript_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "parent_transcript_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "created_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "kind": {
+          "enum": [
+            "ui_transcript",
+            "asr_verbatim",
+            "human_verified",
+            "reconstruction"
+          ]
+        },
+        "coverage": {
+          "enum": [
+            "complete",
+            "partial",
+            "unknown"
+          ]
+        },
+        "source_capture_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "turns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/turn"
+          },
+          "minItems": 1
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "transcript_id",
+        "parent_transcript_id",
+        "created_at",
+        "kind",
+        "coverage",
+        "source_capture_ids",
+        "turns",
+        "notes"
+      ]
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "kind": {
+          "enum": [
+            "repeat_request",
+            "examiner_interruption",
+            "technical_failure",
+            "self_repair",
+            "timer_signal",
+            "answer_end",
+            "assistance",
+            "no_response_observed",
+            "card_hidden",
+            "other"
+          ]
+        },
+        "phase": {
+          "enum": [
+            "setup",
+            "warmup",
+            "preparation",
+            "narration",
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "closing",
+            "post_processing"
+          ]
+        },
+        "turn_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_capture_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "evidence_basis": {
+          "enum": [
+            "captured",
+            "self_report"
+          ]
+        },
+        "offset_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "detail": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "phase",
+        "turn_id",
+        "source_capture_id",
+        "evidence_basis",
+        "offset_ms",
+        "detail"
+      ]
+    },
+    "evidence": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "turn"
+            },
+            "transcript_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            "turn_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            "quote": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "char_start": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "char_end": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "transcript_id",
+            "turn_id",
+            "quote",
+            "char_start",
+            "char_end"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "audio"
+            },
+            "asset_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            "start_ms": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "end_ms": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "kind",
+            "asset_id",
+            "start_ms",
+            "end_ms"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "capture"
+            },
+            "capture_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            "quote": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "capture_id",
+            "quote"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "event"
+            },
+            "event_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            }
+          },
+          "required": [
+            "kind",
+            "event_id"
+          ]
+        }
+      ]
+    },
+    "criterion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "criterion_id": {
+          "enum": [
+            "task_response",
+            "organization",
+            "grammar",
+            "vocabulary",
+            "intelligibility",
+            "fluency",
+            "interaction"
+          ]
+        },
+        "status": {
+          "enum": [
+            "scored",
+            "not_assessable",
+            "not_applicable"
+          ]
+        },
+        "score": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_mode": {
+          "enum": [
+            "text",
+            "archived_audio",
+            "live_audio",
+            "event",
+            "none"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "enum": [
+                "missing_audio",
+                "missing_card",
+                "missing_question",
+                "missing_transcript",
+                "insufficient_sample",
+                "technical_failure",
+                "unsupported_modality",
+                "not_in_scope",
+                "uncertain_evidence"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        }
+      },
+      "required": [
+        "criterion_id",
+        "status",
+        "score",
+        "evidence_mode",
+        "evidence_refs",
+        "reason_code",
+        "reason",
+        "confidence"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "scored"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "score": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4
+              },
+              "evidence_refs": {
+                "minItems": 1
+              },
+              "reason_code": {
+                "type": "null"
+              },
+              "evidence_mode": {
+                "enum": [
+                  "text",
+                  "archived_audio",
+                  "live_audio",
+                  "event"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "not_assessable",
+                  "not_applicable"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "score": {
+                "type": "null"
+              },
+              "reason_code": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "task_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "question_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "attempt_status": {
+          "enum": [
+            "answered",
+            "no_response_observed",
+            "missing_capture",
+            "not_asked",
+            "assisted"
+          ]
+        },
+        "topic_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+          },
+          "uniqueItems": true
+        },
+        "question_type_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+          },
+          "uniqueItems": true
+        },
+        "criteria": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/criterion"
+          },
+          "minItems": 6,
+          "maxItems": 6
+        }
+      },
+      "required": [
+        "question_id",
+        "attempt_status",
+        "topic_ids",
+        "question_type_ids",
+        "criteria"
+      ]
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "finding_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "kind": {
+          "enum": [
+            "mistake",
+            "strength",
+            "uncertain",
+            "style_suggestion"
+          ]
+        },
+        "taxonomy_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "secondary_taxonomy_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+          },
+          "uniqueItems": true
+        },
+        "question_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "occurrence_group_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "criterion_ids": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "task_response",
+              "organization",
+              "grammar",
+              "vocabulary",
+              "intelligibility",
+              "fluency",
+              "interaction"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "severity": {
+          "anyOf": [
+            {
+              "enum": [
+                "minor",
+                "moderate",
+                "major"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "countable": {
+          "type": "boolean"
+        },
+        "resolved_in_turn": {
+          "type": "boolean"
+        },
+        "review_state": {
+          "enum": [
+            "unreviewed",
+            "accepted",
+            "rejected"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "correction": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "root_cause_hypothesis": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "finding_id",
+        "kind",
+        "taxonomy_id",
+        "secondary_taxonomy_ids",
+        "question_id",
+        "occurrence_group_id",
+        "criterion_ids",
+        "severity",
+        "countable",
+        "resolved_in_turn",
+        "review_state",
+        "evidence_refs",
+        "description",
+        "correction",
+        "root_cause_hypothesis"
+      ]
+    },
+    "rewrite": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "question_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "minimal_correction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "improved_answer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "teaching_note": {
+          "type": "string",
+          "minLength": 1
+        },
+        "new_content_added": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "question_id",
+        "minimal_correction",
+        "improved_answer",
+        "teaching_note",
+        "new_content_added"
+      ]
+    },
+    "recommendation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "priority": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "task": {
+          "type": "string",
+          "minLength": 1
+        },
+        "related_finding_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+          },
+          "uniqueItems": true
+        },
+        "success_criterion": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "priority",
+        "task",
+        "related_finding_ids",
+        "success_criterion"
+      ]
+    },
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "metric_id": {
+          "enum": [
+            "duration_ms",
+            "wpm",
+            "long_pause_count",
+            "response_latency_ms"
+          ]
+        },
+        "question_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unit": {
+          "enum": [
+            "ms",
+            "words_per_minute",
+            "count"
+          ]
+        },
+        "method_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_asset_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+          },
+          "uniqueItems": true
+        },
+        "source_turn_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+          },
+          "uniqueItems": true
+        },
+        "evidence_mode": {
+          "enum": [
+            "archived_audio",
+            "measurement_log",
+            "none"
+          ]
+        },
+        "source_capture_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "null_reason": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "metric_id",
+        "question_id",
+        "value",
+        "unit",
+        "method_id",
+        "source_asset_ids",
+        "source_turn_ids",
+        "evidence_mode",
+        "source_capture_id",
+        "null_reason",
+        "notes"
+      ]
+    },
+    "assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "assessment_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "kind": {
+          "enum": [
+            "initial",
+            "rescore"
+          ]
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "reviewed",
+            "withdrawn"
+          ]
+        },
+        "created_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "supersedes_assessment_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "blind_to_prior_scores": {
+          "type": "boolean"
+        },
+        "evaluator": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "provider": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "model_reported": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "model_id": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "runtime": {
+              "enum": [
+                "chatgpt_text",
+                "chatgpt_voice",
+                "external_api",
+                "human",
+                "unknown"
+              ]
+            },
+            "settings_text": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "provider",
+            "model_reported",
+            "model_id",
+            "runtime",
+            "settings_text"
+          ]
+        },
+        "versions": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "rubric": {
+              "type": "string",
+              "minLength": 1
+            },
+            "taxonomy": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evaluator_prompt": {
+              "type": "string",
+              "minLength": 1
+            },
+            "metrics": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "rubric",
+            "taxonomy",
+            "evaluator_prompt",
+            "metrics"
+          ]
+        },
+        "input": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "transcript_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            "question_set_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+            },
+            "asset_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+              },
+              "uniqueItems": true
+            },
+            "live_capture_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+              },
+              "uniqueItems": true
+            },
+            "input_manifest_sha256": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "transcript_id",
+            "question_set_id",
+            "asset_ids",
+            "live_capture_ids",
+            "input_manifest_sha256"
+          ]
+        },
+        "task_results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/task_result"
+          },
+          "minItems": 1,
+          "maxItems": 5
+        },
+        "session_criteria": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/criterion"
+          },
+          "minItems": 1,
+          "maxItems": 1
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/finding"
+          }
+        },
+        "rewrites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rewrite"
+          }
+        },
+        "recommendations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/recommendation"
+          },
+          "maxItems": 3
+        },
+        "metrics": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/metric"
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "assessment_id",
+        "kind",
+        "status",
+        "created_at",
+        "supersedes_assessment_id",
+        "blind_to_prior_scores",
+        "evaluator",
+        "versions",
+        "input",
+        "task_results",
+        "session_criteria",
+        "findings",
+        "rewrites",
+        "recommendations",
+        "metrics",
+        "limitations",
+        "summary"
+      ]
+    },
+    "annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "annotation_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "created_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "target_type": {
+          "enum": [
+            "assessment",
+            "finding",
+            "transcript",
+            "turn"
+          ]
+        },
+        "target_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "action": {
+          "enum": [
+            "confirm",
+            "dispute",
+            "select_default",
+            "note"
+          ]
+        },
+        "comment": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "annotation_id",
+        "created_at",
+        "target_type",
+        "target_id",
+        "action",
+        "comment"
+      ]
+    }
+  }
+}

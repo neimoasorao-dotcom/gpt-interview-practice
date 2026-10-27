@@ -1,0 +1,19 @@
+{
+  "metrics_id": "pre1-learning-metrics",
+  "version": "1.0.0",
+  "wordcount": {
+    "method_id": "wordcount-en-v1",
+    "regex": "[A-Za-z]+(?:['-][A-Za-z]+)*|[0-9]+(?:[.,][0-9]+)*",
+    "apostrophe_mapping": {"’": "'", "‘": "'"},
+    "include_observed_fillers": true,
+    "exclude_control_turns": true,
+    "do_not_change_original_text": true
+  },
+  "audio_metrics": [
+    {"id": "duration_ms", "unit": "ms", "definition": "answer_segment_end_ms - answer_segment_start_ms; includes within-answer pauses", "requires_audio_or_measurement_log": true},
+    {"id": "wpm", "unit": "words_per_minute", "definition": "wordcount-en-v1(answer) / (duration_ms / 60000)", "requires_audio_or_measurement_log": true, "zero_duration_policy": "null"},
+    {"id": "long_pause_count", "unit": "count", "definition": "number of internal non-voiced intervals >= 500ms; detector name and version must be recorded", "threshold_ms": 500, "requires_audio_or_measurement_log": true},
+    {"id": "response_latency_ms", "unit": "ms", "definition": "learner_audio_start_ms - examiner_question_audio_end_ms; requires both speakers and one clock", "requires_audio_or_measurement_log": true, "network_latency_caveat": true}
+  ],
+  "audio_automatic_measurement_in_initial_web": false
+}

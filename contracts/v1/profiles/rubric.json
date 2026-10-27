@@ -1,0 +1,128 @@
+{
+  "rubric_id": "pre1-learning-diagnostic",
+  "version": "1.0.0",
+  "official_equivalent": false,
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "integer_only": true
+  },
+  "minimum_english_words_for_grammar_vocabulary": 5,
+  "criteria": [
+    {
+      "id": "task_response",
+      "label_ja": "適合・内容",
+      "scope": "task",
+      "requires_audio": false,
+      "anchors": {
+        "0": "課題に応じない・確認済み無回答",
+        "1": "中心課題をほぼ満たさない",
+        "2": "主題には応じるが重要な欠落がある",
+        "3": "直接応じ主要内容がほぼ伝わる",
+        "4": "必要な情報・理由が明確で効果的"
+      }
+    },
+    {
+      "id": "organization",
+      "label_ja": "構成",
+      "scope": "task",
+      "requires_audio": false,
+      "anchors": {
+        "0": "関係を辿れない",
+        "1": "断片の羅列",
+        "2": "大筋は辿れるが飛躍が目立つ",
+        "3": "順序・主張と理由がおおむね明確",
+        "4": "一貫した自然な展開"
+      }
+    },
+    {
+      "id": "grammar",
+      "label_ja": "文法・語法",
+      "scope": "task",
+      "requires_audio": false,
+      "anchors": {
+        "0": "文構造が継続的に崩れ理解困難",
+        "1": "基本的誤りが頻発し理解に大きく影響",
+        "2": "伝達は成立するが誤りが反復",
+        "3": "基本が安定し必要な複文を使用",
+        "4": "適切な構文を柔軟かつ正確に使用"
+      }
+    },
+    {
+      "id": "vocabulary",
+      "label_ja": "語彙",
+      "scope": "task",
+      "requires_audio": false,
+      "anchors": {
+        "0": "語選択が継続的に伝達を妨げる",
+        "1": "不足・誤用で意味が大きく失われる",
+        "2": "基本語で伝達するが反復・誤用がある",
+        "3": "適切な語・必要な言換えを使用",
+        "4": "精度の高い語・自然な組合せを柔軟に使用"
+      }
+    },
+    {
+      "id": "intelligibility",
+      "label_ja": "明瞭さ",
+      "scope": "task",
+      "requires_audio": true,
+      "anchors": {
+        "0": "内容の大部分が理解不能",
+        "1": "推測が頻繁に必要",
+        "2": "多くは理解できるが問題が時々妨げる",
+        "3": "全体に理解しやすい",
+        "4": "意味を追う負担が小さい"
+      }
+    },
+    {
+      "id": "fluency",
+      "label_ja": "流暢さ",
+      "scope": "task",
+      "requires_audio": true,
+      "anchors": {
+        "0": "発話を繋げられずほぼ伝達不成立",
+        "1": "停止・再開始でまとまりを維持しにくい",
+        "2": "間・修復は目立つが短いまとまりは伝達",
+        "3": "概ね継続でき伝達を妨げない",
+        "4": "自然に継続し修復も流れに収まる"
+      }
+    },
+    {
+      "id": "interaction",
+      "label_ja": "対話維持",
+      "scope": "session",
+      "requires_audio": false,
+      "anchors": {
+        "0": "対話が成立しない",
+        "1": "対応が著しく難しく頻繁に途切れる",
+        "2": "支援・不自然な再確認が度々必要",
+        "3": "必要な確認を含め対話を維持",
+        "4": "状況に応じて確認・修復し安定した意思疎通"
+      }
+    }
+  ],
+  "text_criteria": [
+    "task_response",
+    "organization",
+    "grammar",
+    "vocabulary"
+  ],
+  "audio_criteria": [
+    "intelligibility",
+    "fluency"
+  ],
+  "session_criteria": [
+    "interaction"
+  ],
+  "task_weights": {
+    "narration": 0.4,
+    "q1": 0.15,
+    "q2": 0.15,
+    "q3": 0.15,
+    "q4": 0.15
+  },
+  "missing_policy": "null_if_any_required_component_unscored",
+  "combine_text_and_audio": false,
+  "live_audio_comparison_series": "provisional_separate",
+  "interaction_in_composite": false
+}

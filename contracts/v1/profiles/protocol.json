@@ -1,0 +1,26 @@
+{
+  "protocol_id": "eiken-pre1-traditional-practice",
+  "version": "1.0.0",
+  "verified_at": "2026-10-27",
+  "target": "traditional_grade_pre1_second_stage",
+  "approximate_total_minutes": 8,
+  "preparation_seconds": 60,
+  "narration_seconds": 120,
+  "default_timer": "external_timer",
+  "memo_allowed_in_mock": false,
+  "use_printed_opening_sentence": true,
+  "question_slots": ["narration", "q1", "q2", "q3", "q4"],
+  "card_visible_during": ["preparation", "narration", "q1"],
+  "hide_card_before": "q2",
+  "question_relations": {"q1": "illustration", "q2": "card_topic", "q3": "card_topic", "q4": "loosely_related_social_topic"},
+  "qa_official_seconds_per_answer": null,
+  "natural_repeat_request_automatic_penalty": false,
+  "official_cse": {"speaking_max": 750, "pass_standard": 512, "convert_ai_score": false},
+  "adopt_38_point_system": false,
+  "source_urls": [
+    "https://www.eiken.or.jp/eiken/exam/grade_p1/solutions.html",
+    "https://www.eiken.or.jp/eiken/exam/virtual/grade_p1/",
+    "https://www.eiken.or.jp/cse/",
+    "https://www.eiken.or.jp/eiken/result/eiken-cse_admission.html"
+  ]
+}
